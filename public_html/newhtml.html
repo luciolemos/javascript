@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Validar tecla numéricas</title>
+</head>
+<body>
+
+
+<script>
+
+  function tecla(){
+    evt = window.event;
+    var tecla = evt.keyCode;
+
+    if(tecla > 47 && tecla < 58){ 
+      alert('Precione apenas teclas alfanuméricas');
+      evt.preventDefault();
+    }
+  }
+
+</script>
+
+<input type="text" name="txt" onKeyPress = "tecla()">
+
+</body>
+</html>

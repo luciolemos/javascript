@@ -1,50 +1,101 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-function media1(){
-    N1 = parseFloat(prompt("Nota 1"));
-            N2 = parseFloat(prompt("Nota 2"));
-            N3 = parseFloat(prompt("Nota 3"));
 
-            M = (N1 + N2 + N3)/3;
+function infonumero() {
+    alert("Este script solicita um número e  retorna para o usuário o número informado.\nExemplo de estrutura sequencial.");
+    n = parseInt(prompt("Digite um número."));
+    alert("O número informado foi " + n+".");
+}
 
-            if (M >= 7) {
-                alert("Sua média foi " +M.toFixed(2)+ " e o Sr. está Aprovado!");
-                }else if (M < 3) {
-                alert("Sua média foi " +M.toFixed(2)+ " e o Sr. está Reprovado!");
-            } else {
-                N4 = parseFloat(prompt("Nota 4"));
-                M = (M + N4) / 2;
-                if (M >= 5) {
-                    alert("Sua média foi " + M.toFixed(2) + " e o Sr. está Aprovado!");
-                } else {
-                    alert("Sua média foi " + M.toFixed(2) + " e o Sr. está Reprovado!");
-                }
+function valor_em_intervalo() {
+    alert("Este script verifica se um número solicitado\nestá dentro de um intervalo desejado.\nFaz uso de uma estrutura condicional simples que impõe que a instrução ou bloco de intruções só sejam excutadas se a condição estabelecida for satisfeita.");
+    var n = parseInt(prompt("Informe um número inteiro entre 0 e 10"));
+    for (var a = 1; a <= 4; a = a + 1) {
+        if (n > 10) {
+            alert("Desculpe!\nDigite novamente.\n" + n + " não está no intervalo desejado.\nResta(m) apenas " + (5 - a) + " tentativa(s)");
+            n = parseInt(prompt("Informe um número inteiro entre 0 e 10"));
+        } else {
+            alert("Parabéns.\n" + n + " está no intervalo desejado.\nBye bye!!");
+            break;
+        }
+    }
+}
 
-            }
+function media_um() {
+    alert("Este script faz o cálculo da média(M) escolar de um aluno,\ndadas as 4 notas trimestrais.");
+    N1 = parseFloat(prompt("Nota 1º Trimestre"));
+    N2 = parseFloat(prompt("Nota 2º Trimestre"));
+    N3 = parseFloat(prompt("Nota 3º Trimestre"));
+    N4 = parseFloat(prompt("Nota 4º Trimestre"));
+    M = (N1 + N2 + N3+ N4) / 4;
+
+    if (5<=M<7) {
+            alert("Sua média foi " + M.toFixed(2) + " e o Sr. está em recuperação!");
+    }
+    else if (M < 5) {
+            alert("Sua média foi " + M.toFixed(2) + " e o Sr. está reprovado!");
+    }else {
+            alert("Sua média foi " + M.toFixed(2) + " e o Sr. está aprovado!");
+    }
+    
+   
+   }
+
+function conversor() {
+    alert("Este script solicita uma medida em metros e a converte em centímetros.");
+    m = parseFloat(prompt("Informe a medida (m) a converter."));
+    alert("A medida informada corresponde a " + m * 100 + "cm.");
+}
+
+function helloword() {
+    alert("Meu primeiro script é uma mensagem de boas vindas.");
+    alert("Olá!\nSeja bem vindo!\nEsse é meu primeiro script.");
+}
+
+function exfor() {
+    alert("Este script verifica se um número informado é par.");
+    var n = parseInt(prompt("Digite um número inteiro."));
+    for (var a = 1; a <= 4; a = a + 1){
+    
+//    for (var a = 1; a <= 4; a = a + 1)
+    if(n % 2!==0){
+          alert("O número " + n +" não é par.");
+          var n = parseInt(prompt("Digite um número."));    
+    }else {
+            alert("Parabéns!!!\n O número " + n +" é par.");
+            break;
+        }
+}
 }
 
 function vogal() {
-    var escolha = prompt("Digite uma letra");
-    escolha = escolha.toUpperCase();//toUpperCase Transforma as letras em maiusculas
-    switch (escolha) {
+    alert("Este script verifica se a letra informada é vogal ou consoante.");
+    var letra = prompt("Digite uma letra");
+    letra = letra.toUpperCase();//toUpperCase Transforma as letras em maiusculas
+    switch (letra) {
         case "A":
         case "E":
         case "I":
         case "O":
         case "U":
-            alert("Você digitou uma vogal");
+            alert("A letra Você digitou uma vogal");
             break;
 
         default:
             alert("Você digitou uma consoante");
     }
-
 }
-function somaNumeros() {
-    /* 
+
+function soma_um() {
+    alert("Este script soma 5 númmeros inteiros.");
+    s = 0;
+    for (var a = 0; a < 5; a++) {
+        n = parseInt(prompt("Digite o " + (a + 1) + "º número"));
+        s += n;
+    }
+    alert("A soma dos númeos informados é " + s + ".");
+}
+
+function soma_dois() {
+     alert("Este script soma 5 númmeros inteiros.");
      n1 = parseInt(prompt("Digite o 1º número"));
      n2 = parseInt(prompt("Digite o 2º número"));
      n3 = parseInt(prompt("Digite o 3º número"));
@@ -52,36 +103,85 @@ function somaNumeros() {
      n5 = parseInt(prompt("Digite o 5º número"));
      
      soma = n1 + n2 + n3 + n4 + n5;
-     alert("A soma dos 5 números é " + soma);
-     
-     */
-    s = 0;
-    for (var a = 0; a < 5; a++) {
-        n = parseInt(prompt("Digite o " + (a + 1) + "º número"));
-        s += n;
-    }
-    alert("a soma é " + s);
+     alert("A soma dos 5 números informados é " + soma +".");
+      
 }
-function somadoisnumeros() {
+
+function soma_tres() {
+    alert("Este script soma dois números inteiros.");
     x = prompt("Informe o primeiro número");
     y = prompt("Informe o segundo número");
     soma = parseInt(x) + parseInt(y);
-    alert("A soma dos dois números informados é " + soma);
+    alert("A soma dos dois números informados é " + soma +".");
 }
+
 function showmaior() {
-    //Faça um Programa que peça dois números e imprima o maior deles.
-    num1 = parseInt(prompt("Digite o primeiro numaro"));
-    num2 = parseInt(prompt("Digite o segundo numero"));
+    alert("Este script solicita dois números e imprime o maior deles.");
+    num1 = parseInt(prompt("Digite o primeiro número"));
+    num2 = parseInt(prompt("Digite o segundo número"));
     if (num1 > num2) {
-        alert("O primeiro número é maior " + num1);
-    } else {
-        alert("O segundo número é maior " + num2);
+        alert("Os números informados foram " +num1+ " e " +num2+ ".\nO primeiro número é maior que o segundo.");
+    } else if (num2 > num1) {
+        alert("Os números informados foram " +num1+ " e " +num2+ ".\nO segundo número é maior que o primeiro.");
+    }else{
+        alert("Os números informados são iguais.");
     }
 }
+
+
+function SomenteNumero(e) {
+                var tecla; //Armazena a tecka pressionada.
+                 
+                if (e.which) {
+                    tecla = e.which;
+                } else {
+                    tecla = e.keyCode;
+                }
+ 
+                if ((tecla >= 48 && tecla <= 57) || (e.which === 08)) {
+                    return true;
+                } else {
+                    return false;
+                }
+             }
+
+
+
+
 function salario() {
-    h = prompt("Quanto você ganha por hora?");
-    m = prompt("Informe a carga horária diária de trabalho.");
-    alert("Seu salário mensal é de: R$" + (h * m) * 30);
+    alert("Este scrip calcula seu salário a partir da carga horária diária e do ganho por hora.");
+    h = prompt("Quanto você ganha (R$) por hora trabalhada?");
+    m = prompt("Informe a carga horária (h) diária de trabalho.");
+    alert("Seu salário mensal é de: R$" + (h * m) * 30 + ",00.");
+}
+
+function areacircunferencia() {
+    alert("Este scrip calcula a área de uma circunferência dado seu raio.");
+    r = prompt("Informe o raio da circunferência.");
+    alert("A área da circunferência de raio " + r + "uc é: " + 3.14 * Math.pow(r, 2) + "ua");
+}
+
+function areaquadrado() {
+    alert("Este scrip calcula a área de um quadrado dado o seu raio.");
+    l = prompt("Informe o lado do quadrado.");
+    alert("O dobro da área do quadrado de lado L=" + l + " é " + 2 * Math.pow(l, 2) + "ua");
+}
+
+function eleicao() {
+    escolha = prompt("Escolha seu candidato digitando de 1 a 3, ou vote nulo.");
+    switch (escolha) {
+        case "1":
+            alert("Lula presidente!");
+            break;
+        case "2":
+            alert("Bolsonaro presidente!");
+            break;
+        case "3":
+            alert("Aécio presidente!");
+            break;
+        default:
+            alert("Voto nulo");
+    }
 }
 
 function precoProduto() {
@@ -100,6 +200,7 @@ function precoProduto() {
     }
 
 }
+
 function positivoNegativo() {
 
     //Faça um Programa que peça um valor e mostre na tela se o valor é 
@@ -135,16 +236,7 @@ function menorNumero() {
     alert(" - " + n1 + " - " + n2 + " - " + n3);
 
 }
-function quatronumeros() {
-    A = parseFloat(prompt("Nota 1º Bimestre"));
-    B = parseFloat(prompt("Nota 2º Bimestre"));
-    C = parseFloat(prompt("Nota 3º Bimestre"));
-    D = parseFloat(prompt("Nota 4º Bimestre"));
-    M = (A + B + C + D) / 4;
 
-    alert("Sua média final é " + M.toFixed(2));
-
-}
 function masculinoFeminino() {
 
     //Faça um Programa que verifique se uma letra digitada é "F" ou "M".
@@ -189,32 +281,8 @@ function maiorMenor() {
      }
      */
 }
-function infonumero() {
-    n = (prompt("Digite um número"));
-    alert("O número informado foi " + n);
-}
 
-function conversor() {
-    metros = parseFloat(prompt("Digite quantos metros você deseja converter"));
-    convert = metros * 100;
-    alert(metros + " metro(s) equivalem a " + convert + " centimetros");
 
-}
-function conversor() {
-    m = prompt("Informe a medida (m) a converter");
-    alert("A medida informada corresponde a " + m * 100 + "cm");
-
-}
-
-function areacircunferencia() {
-    r = prompt("Informe o raio da circunferência.");
-    alert("A área da circunferência de raio " + r + "uc é: " + 3.14 * Math.pow(r, 2) + "ua");
-}
-
-function areaquadrado() {
-    l = prompt("Informe o lado do quadrado.");
-    alert("O dobro da área do quadrado de lado L=" + l + " é " + 2 * Math.pow(l, 2) + "ua");
-}
 
 function contador() {
     alert("Contador de números pares menores que 12.");
@@ -224,42 +292,12 @@ function contador() {
 }
 
 
-function media() {
-    N1 = parseFloat(prompt("Nota 1"));
-    N2 = parseFloat(prompt("Nota 2"));
-    N3 = parseFloat(prompt("Nota 3"));
-    M = (N1 * 4 + N2 * 5 + N3 * 6) / 15;
-    if (M >= 7) {
-        alert("Sua média foi " + M.toFixed(2) + " e o Sr. está Aprovado!");
-    }
-    if (M < 3) {
-        alert("Sua média foi " + M.toFixed(2) + " e o Sr. está REPROVADO!");
-    } else {
-        alert("Sua média foi " + M.toFixed(2) + " e o Sr. está na 4ª PROVA!");
-    }
-}
-
-function helloword() {
-    alert("Olá!\nSeja bem vindo!\nEsse é meu primeiro script.");
-}
 
 
-function eleicao() {
-    escolha = prompt("Escolha seu candidato digitando de 1 a 3, ou vote nulo.");
-    switch (escolha) {
-        case "1":
-            alert("Lula presidente!");
-            break;
-        case "2":
-            alert("Bolsonaro presidente!");
-            break;
-        case "3":
-            alert("Aécio presidente!");
-            break;
-        default:
-            alert("Voto nulo");
-    }
-}
+
+
+
+
 
 
 function repeticao() {
@@ -273,16 +311,13 @@ function repeticao() {
 
 
 
-function exercicio1() {
-    nota = parseInt(prompt("Informe uma nota entre 0 e 10"));
-    if (nota <= 10) {
-        alert(nota + " está no intervalo desejado.");
-    } else {
-        alert(nota + " não está no intervalo desejado.\n Digite novamente.");
-        nota = parseInt(prompt("Informe uma nota entre 0 e 10"));
-    }
 
-}
+
+
+
+
+
+
 
 
 function comwhile() {
@@ -300,11 +335,7 @@ function exfor() {
     }
 }
 
-function exfor1() {
-    if (i % 2 === 0) {
-        alert("Números pares " + i);
-    }
-}
+
 
 function exercicio03() {
     for (i = 1; i < 2; i++) {
