@@ -1,16 +1,114 @@
 
-function infonumero() {
+function exercicio_for1() {
+    alert("Contador de números pares menores que 12.");
+    for (var i = 0; i <= 10; i += 2) {
+        alert(i);
+    }
+}
+
+function exercicio_for2() {
+    alert("Este script verifica se um número informado é par.");
+    var n = parseInt(prompt("Digite um número inteiro."));
+    for (var a = 1; a <= 4; a = a + 1){
+    
+//    for (var a = 1; a <= 4; a = a + 1)
+    if(n % 2!==0){
+          alert("O número " + n +" não é par.");
+          var n = parseInt(prompt("Digite um número."));    
+    }else {
+            alert("Parabéns!!!\n O número " + n +" é par.");
+            break;
+        }
+}
+}
+
+function exercicio_for3() {
+    alert("Este script soma 5 númmeros inteiros.");
+    s = 0;
+    for (var a = 0; a < 5; a++) {
+        n = parseInt(prompt("Digite o " + (a + 1) + "º número"));
+        s += n;
+    }
+    alert("A soma dos númeos informados é " + s + ".");
+}
+
+
+function estrutura_sequencial1() {
     alert("Este script solicita um número e  retorna para o usuário o número informado.\nExemplo de estrutura sequencial.");
     n = parseInt(prompt("Digite um número."));
     alert("O número informado foi " + n+".");
 }
 
-function valor_em_intervalo() {
+function estrutura_sequencial2() {
+    alert("Este script solicita uma medida em metros e a converte em centímetros.");
+    m = parseFloat(prompt("Informe a medida (m) a converter."));
+    alert("A medida informada corresponde a " + m * 100 + "cm.");
+}
+
+function estrutura_sequencial3() {
+    alert("Meu primeiro script é uma mensagem de boas vindas.");
+    alert("Olá!\nSeja bem vindo!\nEsse é meu primeiro script.");
+}
+
+function estrutura_sequencial4() {
+     alert("Este script soma 5 númmeros inteiros.");
+     n1 = parseInt(prompt("Digite o 1º número"));
+     n2 = parseInt(prompt("Digite o 2º número"));
+     n3 = parseInt(prompt("Digite o 3º número"));
+     n4 = parseInt(prompt("Digite o 4º número"));
+     n5 = parseInt(prompt("Digite o 5º número"));
+     
+     soma = n1 + n2 + n3 + n4 + n5;
+     alert("A soma dos 5 números informados é " + soma +".");
+      
+}
+
+function estrutura_sequencial5() {
+    alert("Este script soma dois números inteiros.");
+    x = prompt("Informe o primeiro número");
+    y = prompt("Informe o segundo número");
+    soma = parseInt(x) + parseInt(y);
+    alert("A soma dos dois números informados é " + soma +".");
+}
+
+function estrutura_sequencial6() {
+    alert("Este scrip calcula seu salário a partir da carga horária diária e do ganho por hora.");
+    h = prompt("Quanto você ganha (R$) por hora trabalhada?");
+    m = prompt("Informe a carga horária (h) diária de trabalho.");
+    alert("Seu salário mensal é de: R$" + (h * m) * 30 + ",00.");
+}
+
+function estrutura_sequencial7() {
+    alert("Este scrip calcula a área de uma circunferência dado seu raio.");
+    r = prompt("Informe o raio da circunferência.");
+    alert("A área da circunferência de raio " + r + "uc é: " + 3.14 * Math.pow(r, 2) + "ua");
+}
+
+function estrutura_sequencial8() {
+    alert("Este scrip calcula a área de um quadrado dado o seu raio.");
+    l = prompt("Informe o lado do quadrado.");
+    alert("O dobro da área do quadrado de lado L=" + l + " é " + 2 * Math.pow(l, 2) + "ua");
+}
+
+
+function exercicio_if_else1() {
+    alert("Este script solicita um número entre 0 e 10 e retorna para o usuário o número informado.\nExemplo de estrutura sequencial.");
+    n = parseInt(prompt("Digite um número."));
+   
+    if (n < 0 || n > 10 || isNaN(n)){
+         alert("Informe um número entre 0 e 10.");
+    }else{
+         alert(n);
+         
+    }
+}
+
+function exercicio_if_else2() {
     alert("Este script verifica se um número solicitado\nestá dentro de um intervalo desejado.\nFaz uso de uma estrutura condicional simples que impõe que a instrução ou bloco de intruções só sejam excutadas se a condição estabelecida for satisfeita.");
     var n = parseInt(prompt("Informe um número inteiro entre 0 e 10"));
     for (var a = 1; a <= 4; a = a + 1) {
-        if (n > 10) {
-            alert("Desculpe!\nDigite novamente.\n" + n + " não está no intervalo desejado.\nResta(m) apenas " + (5 - a) + " tentativa(s)");
+        if (n > 10 || isNaN(n)) {
+            alert("Desculpe!\nDigite novamente.\nO valor informado não está no intervalo desejado, ou não é um número.\nResta(m) apenas " + (5 - a) + " tentativa(s)");
             n = parseInt(prompt("Informe um número inteiro entre 0 e 10"));
         } else {
             alert("Parabéns.\n" + n + " está no intervalo desejado.\nBye bye!!");
@@ -19,7 +117,7 @@ function valor_em_intervalo() {
     }
 }
 
-function media_um() {
+function exercicio_if_else3() {
     alert("Este script faz o cálculo da média(M) escolar de um aluno,\ndadas as 4 notas trimestrais.");
     N1 = parseFloat(prompt("Nota 1º Trimestre"));
     N2 = parseFloat(prompt("Nota 2º Trimestre"));
@@ -38,35 +136,63 @@ function media_um() {
     
    
    }
-
-function conversor() {
-    alert("Este script solicita uma medida em metros e a converte em centímetros.");
-    m = parseFloat(prompt("Informe a medida (m) a converter."));
-    alert("A medida informada corresponde a " + m * 100 + "cm.");
+   
+function exercicio_if_else4() {
+    alert("Este script solicita dois números e imprime o maior deles.");
+    num1 = parseInt(prompt("Digite o primeiro número"));
+    num2 = parseInt(prompt("Digite o segundo número"));
+    if (num1 > num2) {
+        alert("Os números informados foram " +num1+ " e " +num2+ ".\nO primeiro número é maior que o segundo.");
+    } else if (num2 > num1) {
+        alert("Os números informados foram " +num1+ " e " +num2+ ".\nO segundo número é maior que o primeiro.");
+    }else{
+        alert("Os números informados são iguais.");
+    }
 }
 
-function helloword() {
-    alert("Meu primeiro script é uma mensagem de boas vindas.");
-    alert("Olá!\nSeja bem vindo!\nEsse é meu primeiro script.");
-}
-
-function exfor() {
-    alert("Este script verifica se um número informado é par.");
-    var n = parseInt(prompt("Digite um número inteiro."));
-    for (var a = 1; a <= 4; a = a + 1){
-    
-//    for (var a = 1; a <= 4; a = a + 1)
-    if(n % 2!==0){
-          alert("O número " + n +" não é par.");
-          var n = parseInt(prompt("Digite um número."));    
-    }else {
-            alert("Parabéns!!!\n O número " + n +" é par.");
-            break;
+function exercicio_if_else5() {  
+    alert("Este script verifica se o sexo informado é masculino ou feminino.");
+    var m = prompt("Digite M ou F,conforme seu sexo seja masculino ou feminino.");
+    for (var a = 1; a <= 4; a = a + 1) {
+    if (m === "m" || m === "M") {
+        alert("O sexo informado foi masculino.\nParabéns!");
+        break;
+    } else if (m === "f" || m === "F") {
+        alert("O sexo informado foi feminino.\nParabéns!");
+         break;
+    } else {
+        alert("Desculpe!\nDigite novamente.\nO sexo informado é inválido.\nResta(m) apenas " + (5 - a) + " tentativa(s).\nDigite M ou F,conforme seu sexo seja masculino ou feminino.");
+        var m = prompt("Digite M ou F,conforme seu sexo seja masculino ou feminino.");
+       
         }
-}
+         
+    }  
+   
 }
 
-function vogal() {
+
+function exercicio_do_while1() {
+alert("Script usando a estrutura de repetição do while.");
+var nota;
+    do{
+        nota = parseFloat(prompt("Digite um número entre 0 e 10"));
+    } while (nota < 0 || nota > 10 || isNaN(nota));
+    alert(nota);
+
+}
+
+function exercicio_do_while2() {
+alert("Script usando a estrutura de repetição do while.");
+var nota;
+    do{
+        nota = parseFloat(prompt("Digite um número entre 0 e 10"));
+    } while (nota < 0 || nota > 10 || isNaN(nota));
+    alert(nota);
+
+}
+
+
+function exercicio_switch1() {
     alert("Este script verifica se a letra informada é vogal ou consoante.");
     var letra = prompt("Digite uma letra");
     letra = letra.toUpperCase();//toUpperCase Transforma as letras em maiusculas
@@ -84,49 +210,56 @@ function vogal() {
     }
 }
 
-function soma_um() {
-    alert("Este script soma 5 númmeros inteiros.");
-    s = 0;
-    for (var a = 0; a < 5; a++) {
-        n = parseInt(prompt("Digite o " + (a + 1) + "º número"));
-        s += n;
-    }
-    alert("A soma dos númeos informados é " + s + ".");
-}
-
-function soma_dois() {
-     alert("Este script soma 5 númmeros inteiros.");
-     n1 = parseInt(prompt("Digite o 1º número"));
-     n2 = parseInt(prompt("Digite o 2º número"));
-     n3 = parseInt(prompt("Digite o 3º número"));
-     n4 = parseInt(prompt("Digite o 4º número"));
-     n5 = parseInt(prompt("Digite o 5º número"));
-     
-     soma = n1 + n2 + n3 + n4 + n5;
-     alert("A soma dos 5 números informados é " + soma +".");
-      
-}
-
-function soma_tres() {
-    alert("Este script soma dois números inteiros.");
-    x = prompt("Informe o primeiro número");
-    y = prompt("Informe o segundo número");
-    soma = parseInt(x) + parseInt(y);
-    alert("A soma dos dois números informados é " + soma +".");
-}
-
-function showmaior() {
-    alert("Este script solicita dois números e imprime o maior deles.");
-    num1 = parseInt(prompt("Digite o primeiro número"));
-    num2 = parseInt(prompt("Digite o segundo número"));
-    if (num1 > num2) {
-        alert("Os números informados foram " +num1+ " e " +num2+ ".\nO primeiro número é maior que o segundo.");
-    } else if (num2 > num1) {
-        alert("Os números informados foram " +num1+ " e " +num2+ ".\nO segundo número é maior que o primeiro.");
-    }else{
-        alert("Os números informados são iguais.");
+function exercicio_switch2() {
+    escolha = prompt("Escolha seu candidato digitando de 1 a 3, ou vote nulo.");
+    switch (escolha) {
+        case "1":
+            alert("Lula presidente!");
+            break;
+        case "2":
+            alert("Bolsonaro presidente!");
+            break;
+        case "3":
+            alert("Aécio presidente!");
+            break;
+        default:
+            alert("Voto nulo");
     }
 }
+
+
+
+function exercicio_do_while3() { 
+    alert("Este script utiliza a estrutura de repetição do while.\nVerifica se o sexo informado é masculino ou feminino.");
+    var nome;
+    do{
+        nome=prompt("Escolha o nome.");
+        if(nome.length<=3 || !isNaN(nome)){
+            alert("O nome é inválido.");                     
+        }
+    }while(nome.length<=3 || !isNaN(nome));
+    
+    var sexo;
+    do{
+        sexo=prompt("Escolha o sexo.");
+        
+    }while(sexo!=="m" && sexo!=="f");
+    alert("Obrigado!");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function SomenteNumero(e) {
@@ -144,46 +277,7 @@ function SomenteNumero(e) {
                     return false;
                 }
              }
-
-
-
-
-function salario() {
-    alert("Este scrip calcula seu salário a partir da carga horária diária e do ganho por hora.");
-    h = prompt("Quanto você ganha (R$) por hora trabalhada?");
-    m = prompt("Informe a carga horária (h) diária de trabalho.");
-    alert("Seu salário mensal é de: R$" + (h * m) * 30 + ",00.");
-}
-
-function areacircunferencia() {
-    alert("Este scrip calcula a área de uma circunferência dado seu raio.");
-    r = prompt("Informe o raio da circunferência.");
-    alert("A área da circunferência de raio " + r + "uc é: " + 3.14 * Math.pow(r, 2) + "ua");
-}
-
-function areaquadrado() {
-    alert("Este scrip calcula a área de um quadrado dado o seu raio.");
-    l = prompt("Informe o lado do quadrado.");
-    alert("O dobro da área do quadrado de lado L=" + l + " é " + 2 * Math.pow(l, 2) + "ua");
-}
-
-function eleicao() {
-    escolha = prompt("Escolha seu candidato digitando de 1 a 3, ou vote nulo.");
-    switch (escolha) {
-        case "1":
-            alert("Lula presidente!");
-            break;
-        case "2":
-            alert("Bolsonaro presidente!");
-            break;
-        case "3":
-            alert("Aécio presidente!");
-            break;
-        default:
-            alert("Voto nulo");
-    }
-}
-
+             
 function precoProduto() {
 
     alert("Digite os preços dos produtos");
@@ -237,68 +331,14 @@ function menorNumero() {
 
 }
 
-function masculinoFeminino() {
-
-    //Faça um Programa que verifique se uma letra digitada é "F" ou "M".
-    //Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
-    var m = prompt("Digite seu sexo - M/F");
-    if (m == "m" || m == "M") {
-        alert("Masculino");
-    } else if (m == "f" || m == "F") {
-        alert("Feminino");
-    } else {
-        alert("Opção invalida");
-    }
+function comwhile() {
+alert("Script usando a estrutura de repetição do while.");
+var nota;
+    do{
+        nota = parseFloat(prompt("Digite um número entre 0 e 10"));
+    } while (nota < 0 || nota > 10 || isNaN(nota));
+    alert(nota);
 }
-
-function maiorMenor() {
-    n1 = parseInt(prompt("Digite o 1º número"));
-    n2 = parseInt(prompt("Digite o 2º número"));
-    n3 = parseInt(prompt("Digite o 3º número"));
-
-    if (n1 > n2 && n3 < n1) {
-        alert("O 1º número é maior");
-    } else if (n2 > n1 && n3 < n2) {
-        alert("O 2º número é maior");
-    } else if (n3 > n1 && n2 < n3) {
-        alert("O 3º número é maior");
-    }
-//para colocar em ordem do menor para o maior    
-    /*    if(a > b) {
-     aux = a;
-     a = b;
-     b = aux;
-     }
-     if(b > c) {
-     aux = b;
-     b = c;
-     c = aux;
-     }
-     if(a > b) {
-     aux = a;
-     a = b;
-     b = aux;
-     }
-     */
-}
-
-
-
-function contador() {
-    alert("Contador de números pares menores que 12.");
-    for (var i = 0; i <= 10; i += 2) {
-        alert(i);
-    }
-}
-
-
-
-
-
-
-
-
-
 
 function repeticao() {
     s = 0;
@@ -310,17 +350,7 @@ function repeticao() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-function comwhile() {
+function comwhile2() {
     var resposta = "não";
     while (resposta !== "sim") {
         resposta = prompt("o cabra é bonito?");
@@ -399,3 +429,35 @@ function exercicio03() {
     }
 }
 
+
+
+function maiorMenor() {
+    n1 = parseInt(prompt("Digite o 1º número"));
+    n2 = parseInt(prompt("Digite o 2º número"));
+    n3 = parseInt(prompt("Digite o 3º número"));
+
+    if (n1 > n2 && n3 < n1) {
+        alert("O 1º número é maior");
+    } else if (n2 > n1 && n3 < n2) {
+        alert("O 2º número é maior");
+    } else if (n3 > n1 && n2 < n3) {
+        alert("O 3º número é maior");
+    }
+//para colocar em ordem do menor para o maior    
+    /*    if(a > b) {
+     aux = a;
+     a = b;
+     b = aux;
+     }
+     if(b > c) {
+     aux = b;
+     b = c;
+     c = aux;
+     }
+     if(a > b) {
+     aux = a;
+     a = b;
+     b = aux;
+     }
+     */
+}
