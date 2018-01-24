@@ -1,11 +1,17 @@
-
+//Contador de números pares menores ou iguais a 20.
+//Utiliza um contador dentro de uma estrutura for.
+//E exibe os números.
 function exercicio_for1() {
-    alert("Contador de números pares menores que 12.");
-    for (var i = 0; i <= 10; i += 2) {
-        alert(i);
+    alert("Contador de números pares menores ou iguais a 20.");
+    p = "";
+    for (var i = 0; i <= 20; i += 2) {
+        p = p + i + " ";
+//        p += i + ", ";
     }
+    alert(p);
 }
 
+//Este script verifica se um número informado é par.
 function exercicio_for2() {
     alert("Este script verifica se um número informado é par.");
     var n = parseInt(prompt("Digite um número inteiro."));
@@ -22,6 +28,7 @@ function exercicio_for2() {
 }
 }
 
+//Este script soma 5 númmeros inteiros.
 function exercicio_for3() {
     alert("Este script soma 5 númmeros inteiros.");
     s = 0;
@@ -32,24 +39,39 @@ function exercicio_for3() {
     alert("A soma dos númeos informados é " + s + ".");
 }
 
+//Este script utiliza a estrutura de repetição for. Verifica o maior de cinco números digitados.
+function exercicio_for4(){
+    alert("Este script utiliza a estrutura de repetição for.\nVerifica o maior de cinco números digitados.");
+    var maior;
+    for(var i=0;i<5;i++){
+        numero=parseFloat(prompt("Digite um númeo"));
+        if(numero>maior||i===0){
+            alert(maior);
+        }
+    }
+}
 
+//Este script solicita um número e  retorna para o usuário o número informado.\nExemplo de estrutura sequencial.
 function estrutura_sequencial1() {
     alert("Este script solicita um número e  retorna para o usuário o número informado.\nExemplo de estrutura sequencial.");
     n = parseInt(prompt("Digite um número."));
     alert("O número informado foi " + n+".");
 }
 
+//Este script solicita uma medida em metros e a converte em centímetros.
 function estrutura_sequencial2() {
     alert("Este script solicita uma medida em metros e a converte em centímetros.");
     m = parseFloat(prompt("Informe a medida (m) a converter."));
     alert("A medida informada corresponde a " + m * 100 + "cm.");
 }
 
+//Meu primeiro script é uma mensagem de boas vindas.
 function estrutura_sequencial3() {
     alert("Meu primeiro script é uma mensagem de boas vindas.");
     alert("Olá!\nSeja bem vindo!\nEsse é meu primeiro script.");
 }
 
+//Este script soma 5 númmeros inteiros.
 function estrutura_sequencial4() {
      alert("Este script soma 5 númmeros inteiros.");
      n1 = parseInt(prompt("Digite o 1º número"));
@@ -63,6 +85,7 @@ function estrutura_sequencial4() {
       
 }
 
+//Este script soma dois números inteiros.
 function estrutura_sequencial5() {
     alert("Este script soma dois números inteiros.");
     x = prompt("Informe o primeiro número");
@@ -71,6 +94,7 @@ function estrutura_sequencial5() {
     alert("A soma dos dois números informados é " + soma +".");
 }
 
+//Este scrip calcula seu salário a partir da carga horária diária e do ganho por hora.
 function estrutura_sequencial6() {
     alert("Este scrip calcula seu salário a partir da carga horária diária e do ganho por hora.");
     h = prompt("Quanto você ganha (R$) por hora trabalhada?");
@@ -78,19 +102,21 @@ function estrutura_sequencial6() {
     alert("Seu salário mensal é de: R$" + (h * m) * 30 + ",00.");
 }
 
+//Este scrip calcula a área de uma circunferência dado seu raio.
 function estrutura_sequencial7() {
     alert("Este scrip calcula a área de uma circunferência dado seu raio.");
     r = prompt("Informe o raio da circunferência.");
     alert("A área da circunferência de raio " + r + "uc é: " + 3.14 * Math.pow(r, 2) + "ua");
 }
 
+//Este script calcula a área de um quadrado dado o seu raio.
 function estrutura_sequencial8() {
-    alert("Este scrip calcula a área de um quadrado dado o seu raio.");
+    alert("Este script calcula a área de um quadrado dado o seu raio.");
     l = prompt("Informe o lado do quadrado.");
     alert("O dobro da área do quadrado de lado L=" + l + " é " + 2 * Math.pow(l, 2) + "ua");
 }
 
-
+//Este script solicita um número entre 0 e 10 e retorna para o usuário o número informado.
 function exercicio_if_else1() {
     alert("Este script solicita um número entre 0 e 10 e retorna para o usuário o número informado.\nExemplo de estrutura sequencial.");
     n = parseInt(prompt("Digite um número."));
@@ -103,6 +129,7 @@ function exercicio_if_else1() {
     }
 }
 
+//Este script verifica se um número solicitado\nestá dentro de um intervalo desejado.\nFaz uso de uma estrutura condicional simples que impõe que a instrução ou bloco de intruções só sejam excutadas se a condição estabelecida for satisfeita.
 function exercicio_if_else2() {
     alert("Este script verifica se um número solicitado\nestá dentro de um intervalo desejado.\nFaz uso de uma estrutura condicional simples que impõe que a instrução ou bloco de intruções só sejam excutadas se a condição estabelecida for satisfeita.");
     var n = parseInt(prompt("Informe um número inteiro entre 0 e 10"));
@@ -117,6 +144,7 @@ function exercicio_if_else2() {
     }
 }
 
+//Este script faz o cálculo da média(M) escolar de um aluno,\ndadas as 4 notas trimestrais.
 function exercicio_if_else3() {
     alert("Este script faz o cálculo da média(M) escolar de um aluno,\ndadas as 4 notas trimestrais.");
     N1 = parseFloat(prompt("Nota 1º Trimestre"));
@@ -136,7 +164,8 @@ function exercicio_if_else3() {
     
    
    }
-   
+
+//Este script solicita dois números e imprime o maior deles.   
 function exercicio_if_else4() {
     alert("Este script solicita dois números e imprime o maior deles.");
     num1 = parseInt(prompt("Digite o primeiro número"));
@@ -150,6 +179,7 @@ function exercicio_if_else4() {
     }
 }
 
+//Este script verifica se o sexo informado é masculino ou feminino.
 function exercicio_if_else5() {  
     alert("Este script verifica se o sexo informado é masculino ou feminino.");
     var m = prompt("Digite M ou F,conforme seu sexo seja masculino ou feminino.");
@@ -170,7 +200,7 @@ function exercicio_if_else5() {
    
 }
 
-
+//Script usando a estrutura de repetição do while
 function exercicio_do_while1() {
 alert("Script usando a estrutura de repetição do while.");
 var nota;
@@ -181,6 +211,7 @@ var nota;
 
 }
 
+//Script usando a estrutura de repetição do while.
 function exercicio_do_while2() {
 alert("Script usando a estrutura de repetição do while.");
 var nota;
@@ -191,7 +222,7 @@ var nota;
 
 }
 
-
+//Este script verifica se a letra informada é vogal ou consoante.
 function exercicio_switch1() {
     alert("Este script verifica se a letra informada é vogal ou consoante.");
     var letra = prompt("Digite uma letra");
@@ -210,6 +241,7 @@ function exercicio_switch1() {
     }
 }
 
+//Escolha seu candidato digitando de 1 a 3, ou vote nulo.
 function exercicio_switch2() {
     escolha = prompt("Escolha seu candidato digitando de 1 a 3, ou vote nulo.");
     switch (escolha) {
@@ -227,8 +259,7 @@ function exercicio_switch2() {
     }
 }
 
-
-
+//Este script utiliza a estrutura de repetição do while.\nVerifica se o sexo informado é masculino ou feminino.
 function exercicio_do_while3() { 
     alert("Este script utiliza a estrutura de repetição do while.\nVerifica se o sexo informado é masculino ou feminino.");
     var nome;
@@ -247,10 +278,17 @@ function exercicio_do_while3() {
     alert("Obrigado!");
 }
 
-
-
-
-
+//Este script utiliza a estrutura de repetição for.\nVerifica o maior de cinco números digitados.
+function exercicio_for4(){
+    alert("Este script utiliza a estrutura de repetição for.\nVerifica o maior de cinco números digitados.");
+    var maior;
+    for(var i=0;i<5;i++){
+        numero=parseFloat(prompt("Digite um númeo"));
+        if(numero>maior||i===0){
+            alert(maior);
+        }
+    }
+}
 
 
 
@@ -329,15 +367,6 @@ function menorNumero() {
     }
     alert(" - " + n1 + " - " + n2 + " - " + n3);
 
-}
-
-function comwhile() {
-alert("Script usando a estrutura de repetição do while.");
-var nota;
-    do{
-        nota = parseFloat(prompt("Digite um número entre 0 e 10"));
-    } while (nota < 0 || nota > 10 || isNaN(nota));
-    alert(nota);
 }
 
 function repeticao() {
