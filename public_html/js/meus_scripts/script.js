@@ -40,6 +40,33 @@ function exercicio_for3() {
 }
 
 //Este script utiliza a estrutura de repetição for. Verifica o maior de cinco números digitados.
+
+
+function exercicio_array1() {
+    var notas = new Array();
+    for (var i = 0; i < 5; i++) {
+        notas[i] = Number(prompt("Digite"));
+    }
+    for (var i = 0; i < 5; i++) {
+//        console.log(notas.length);
+alert("O número informado foi ".concat(notas[i]));
+//alert("Números " + notas[i] + "<br>");
+    }
+}
+
+function exercicio_array2() {
+    var arr1 = ["Cecilie", "Lone"];
+    var arr2 = ["Emil", "Tobias", "Linus"];
+    var arr3 = ["Robin", "Morgan"];
+    var myChildren = arr1.concat(arr2, arr3);
+    alert("Meus filhos são: ".concat(myChildren));
+}
+
+
+
+
+
+
 function exercicio_for4(){
     alert("Este script utiliza a estrutura de repetição for.\nVerifica o maior de cinco números digitados.");
     var maior;
@@ -55,7 +82,8 @@ function exercicio_for4(){
 function estrutura_sequencial1() {
     alert("Este script solicita um número e  retorna para o usuário o número informado.\nExemplo de estrutura sequencial.");
     n = parseInt(prompt("Digite um número."));
-    alert("O número informado foi " + n+".");
+    alert("O número informado foi " + n +".");
+//  alert("O número informado foi ".concat(n));
 }
 
 //Este script solicita uma medida em metros e a converte em centímetros.
