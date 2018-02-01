@@ -1,26 +1,49 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<script>
+
+function questao1(n){
+    var resposta="";
+    for(var i=1;i<=n;i++){
+        for (var j=1;j<=i;j++){
+            resposta += i + "";
+        }
+         resposta += "<br>";
+    }
+    return resposta;
+}
+document.write(questao1(10));
+
+</script>
+</body>
+</html>-->
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Validar tecla numéricas</title>
+
 </head>
 <body>
-
-
 <script>
 
-  function tecla(){
-    evt = window.event;
-    var tecla = evt.keyCode;
-
-    if(tecla > 47 && tecla < 58){ 
-      alert('Precione apenas teclas alfanuméricas');
-      evt.preventDefault();
+function questao1(n){
+    var resposta="";
+    for(var i=1;i<=n;i++){
+        for (var j=1;j<=n;j++){
+            resposta += i + "";
+        }
+         resposta += "<br>";
     }
-  }
+    return resposta;
+}
+document.write(questao1(10));
 
 </script>
-
-<input type="text" name="txt" onKeyPress = "tecla()">
-
 </body>
-</html>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
